@@ -5,12 +5,19 @@
 
 }
 
+@font-face {
+    font-family: "Encode";
+    src: url(../storage/font/EncodeSans-VariableFont_wdth\,wght.ttf);
+}
 body {
     background-color: white;
     color: #121111;
-    
+    font-family: "Encode", sans-serif;
+
 }
 
 /* ==========================================
-   1. ESTILOS PARA CELULAR (Mobile First)
+   1. ESTILOS PARA CELULAR
    ========================================== */
+
+
