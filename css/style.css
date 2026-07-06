@@ -20,4 +20,46 @@ body {
    1. ESTILOS PARA CELULAR
    ========================================== */
 
+nav {
+    background-color: transparent;
+    width: 100%;
+    z-index: 100;
+}
+
+nav.barraNavegacion {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    background-color: #292526;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+nav ul.menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav ul.menu span{
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul.menu img{
+    width: 25px;
+    height: 25px;
+}
 
