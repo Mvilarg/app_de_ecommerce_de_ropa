@@ -63,6 +63,61 @@ nav ul.menu img{
     height: 25px;
 }
 
+.encabezado {
+    margin-top: 10px;
+    min-height: 200px;
+    background-color: white;
+    font-size: 20px;
+    display: fixed;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    position: relative;
+}
+
+.columnaIzquierda{
+    flex: 1;
+    display: flex;
+}
+
+.encabezado p{
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.5;
+
+}
+
+.encabezado h1{
+    text-align: left;
+    font-size: 30px;
+
+}
+
+.columnaDerecha{
+    flex: 1;
+    display: block;
+    justify-content: center;
+    gap: 20px;
+    max-width: 250px;
+}
+
+.encabezado img{
+    width: 20vw;
+    height: 20vw;
+    float: right;
+    padding:30px    ;
+    margin-right:auto;
+    margin-right: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6e6e6e
+
+
+}
+
+
+
 /* ==========================================
      2. ESTILOS PARA ESCRITORIO
      ========================================== */
