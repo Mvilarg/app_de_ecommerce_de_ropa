@@ -354,13 +354,13 @@ footer p {
 
     .productos {
         /* En pantallas de computadora, expande el catálogo a 4 columnas perfectas */
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 25px; /* Un poco más de espacio entre tarjetas */
         padding: 30px;
     }
     
     .productos .visual > img:first-child {
-        height: 800px; /* Fotos un poco más grandes en escritorio */
+        height: 600px; /* Fotos un poco más grandes en escritorio */
         
     }
 
