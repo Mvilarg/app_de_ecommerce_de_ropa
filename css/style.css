@@ -68,18 +68,14 @@ nav ul.menu img{
     min-height: 200px;
     background-color: white;
     font-size: 20px;
-    display: fixed;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
     gap: 40px;
     padding: 40px;
     position: relative;
+    padding: 15px 30px;
 }
 
-.columnaIzquierda{
-    flex: 1;
-    display: flex;
-}
 
 .encabezado p{
     text-align: left;
@@ -94,24 +90,13 @@ nav ul.menu img{
 
 }
 
-.columnaDerecha{
-    flex: 1;
-    display: block;
-    justify-content: center;
-    gap: 20px;
-    max-width: 250px;
-}
-
 .encabezado img{
-    width: 20vw;
-    height: 20vw;
-    float: right;
-    padding:30px    ;
-    margin-right:auto;
-    margin-right: auto;
-    border-radius: 50%;
+    width: 15vw;
+    height: 15vw;   ;
+    border-radius: 25vw;
     object-fit: cover;
-    border: 3px solid #6e6e6e
+    border: 3px solid #6e6e6e;
+    transform: translate(68vw, -14vw);
 
 
 }
@@ -157,21 +142,21 @@ nav ul.menu img{
         gap: 30px;
         width: 100%;
         justify-content: flex-start;
-}
+    }
 
-nav ul.menu span{
-    display: inline;
-    color: #ffffff;
-    padding: 0;
-    margin: 0;
-}
+    nav ul.menu span{
+        display: inline;
+        color: #ffffff;
+        padding: 0;
+        margin: 0;
+    }
 
-nav ul.menu li{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #ffffff;
+    nav ul.menu li{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #ffffff;
 
-}
+    }   
 
 }
