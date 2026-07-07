@@ -89,7 +89,6 @@ nav ul.menu img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border-color: ;
     object-fit: cover;
 }
 
@@ -133,6 +132,59 @@ nav ul.menu img{
     width: 20px;
     height: 20px;
 }
+
+.categorias {
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.categorias::-webkit-scrollbar{
+    display: none;
+}
+
+.categorias ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 12px;
+}
+
+.categorias ul li {
+    flex-shrink: 0;
+}
+
+.categorias button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #f7f7f7;
+    border: 1px solid #eaeaea;
+    border-radius: 30px;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.categorias button img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.categorias button.active {
+    background-color: #121111;
+    border-color: #121111;
+    color: #ffffff;
+}
+
 
 /* ==========================================
      2. ESTILOS PARA ESCRITORIO
