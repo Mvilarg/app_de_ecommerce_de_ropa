@@ -302,55 +302,92 @@ footer p {
 
 @media (min-width: 1024px) {
 
-    nav {
-      background-color: transparent;
-      width: 100%;
-      z-index: 100;
-    }
-
-    nav.barraNavegacion {
-        display: flex;
-        position: fixed;
-        top: 0px;
-        justify-content: center;
-        align-items: center;
-        padding: 0.8rem 2rem;
-        width: 150px;
-        height: 100vh;
-        max-width: 1200px;
-        margin: 0;
-        left: 0;
-        transform: none;
-        border-radius: 0;
-        background-color: #292526;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        padding: 2rem 1rem;
+     nav.barraNavegacion {
+        position: fixed;          
+        top: 20px;                     
+        bottom: auto;                
+        width: 100%;                 
+        height: auto;                
+        
     }
 
     nav ul.menu {
-        flex-direction: column;
         display: flex;
-        list-style: none;
-        align-items: flex-start;
-        gap: 30px;
+        flex-direction: row;         
+        justify-content: center;     
+        align-items: center;
+        gap: 40px;                   
         width: 100%;
-        justify-content: flex-start;
-    }
-
-    nav ul.menu span{
-        display: inline;
-        color: #ffffff;
+        list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    nav ul.menu li{
+    nav ul.menu li {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 10px;
         color: #ffffff;
+    }
 
-    }   
+    nav ul.menu span {
+        display: inline;             
+        color: #ffffff;
+    }
+
+    nav ul.menu a {
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+    }
+
+    nav ul.menu li a img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px ;
+    }
+
+    main {
+        margin-left: 0;   
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+     .Usuario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    padding-top: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
+    }
+
+    .usuario-textos p{
+    text-align: left;
+    font-size: 14px;
+    color: #8e8e8e;
+    margin: 0;
+    }
+
+    .usuario-textos h1{
+    text-align: left;
+    font-size: 20px;
+    color: #111111;
+    margin: 5px 0 0 0;
+    }
+
+    .Usuario img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
 
     .productos {
         /* En pantallas de computadora, expande el catálogo a 4 columnas perfectas */
