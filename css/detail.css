@@ -157,41 +157,41 @@ body {
     margin: 0;
 }
 
-/* 👟 Contenedor general de la sección */
+
 .Personalizar {
     padding: 20px;
     box-sizing: border-box;
     width: 100%;
 }
 
-/* 🏷️ Título "Elige tu talla" */
+
 .Personalizar h3.derecho {
     font-size: 16px;
     font-weight: 700;
     color: #111111;
-    margin: 0 0 15px 0; /* Espacio abajo para separar el título de los círculos */
+    margin: 0 0 15px 0; 
 }
 
-/* 📋 La lista: la volvemos fila horizontal y permitimos que salte de línea si faltan pantallas chicas */
+
 .Personalizar ul.tallas {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;        /* 🔄 Si pones muchas tallas, saltan abajo ordenadamente sin romperse */
+    flex-wrap: wrap;        
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 12px;              /* Espaciado elegante entre cada burbuja de talla */
+    gap: 12px;              
 }
 
-/* ⚪ Cada burbuja de talla por defecto (Desactivada) */
+
 .Personalizar ul.tallas li {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;            /* Ancho y alto idénticos para hacer un círculo perfecto */
+    width: 44px;            
     height: 44px;
-    border: 1px solid #e0e0e0; /* Borde gris sutil */
-    border-radius: 50%;     /* Círculo perfecto */
+    border: 1px solid #e0e0e0; 
+    border-radius: 50%;     
     font-size: 14px;
     font-weight: 500;
     color: #555555;
@@ -210,4 +210,71 @@ body {
 .Personalizar ul.tallas li:hover:not(.activa) {
     border-color: #111111;
     color: #111111;
+}
+
+
+.comprar {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff; 
+}
+
+
+.comprar button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 400px;         
+    height: 56px;            
+    background-color: #292526; 
+    color: #ffffff;            
+    border: none;
+    border-radius: 30px;       
+    padding: 0 24px;           
+    font-size: 15px;
+    font-weight: 600;         
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(41, 37, 38, 0.25); 
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+
+.comprar button .btn-contenido {
+    display: flex;
+    align-items: center;
+    gap: 12px;                
+}
+
+
+.comprar button .btn-contenido img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); 
+}
+
+
+.comprar button .precio-antes {
+    font-size: 12px;
+    color: #8e8e8e;           
+    font-weight: 400;
+    margin-left: 10px;
+    text-decoration: line-through;
+}
+
+
+.comprar button:active {
+    transform: scale(0.98);    
+    background-color: #1a1819; 
+}
+
+.comprar .btn-enlace {
+    text-decoration: none; 
+    width: 100%;           
+    display: flex;
+    justify-content: center;
 }
