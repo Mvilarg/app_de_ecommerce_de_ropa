@@ -291,10 +291,50 @@ body {
     margin: 0;
 }
 
-/* El monto final destacado en negrita */
+
 .desglose-precios .subtotal .sptotal {
     font-size: 16px;
-    font-weight: 700;       /* Más marcado como la referencia */
+    font-weight: 700;       
     color: #111111;
     margin: 0;
+}
+
+
+.pagar {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff; 
+}
+
+
+.pagar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    width: 100%;
+    max-width: 400px;          
+    height: 56px;             
+    background-color: #232021;  
+    border: none;
+    border-radius: 30px;        
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(35, 32, 33, 0.2); 
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+
+.pagar button span {
+    color: #ffffff;             
+    font-size: 16px;
+    font-weight: 600;           
+    letter-spacing: 0.5px;      
+}
+
+
+.pagar button:active {
+    transform: scale(0.98);     
+    background-color: #151314;  
 }
