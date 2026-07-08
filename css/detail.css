@@ -69,3 +69,90 @@ body {
     height: 18px;
     object-fit: contain;
 }
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.info-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.Titulo-izquierdo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 70%;
+}
+
+.Titulo-izquierdo h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* 🌟 Tu clase personalizada corregida en fila horizontal */
+.Titulo-izquierdo .raiting {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 8px;
+}
+
+.Titulo-izquierdo .raiting span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.Titulo-izquierdo .raiting p {
+    font-size: 13px;
+    color: #2544cf;
+    margin: 0;
+}
+
+.Titulo-derecho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 8px 14px;
+    border-radius: 30px;
+    gap: 14px;
+    width: 95px;
+    box-sizing: border-box;
+}
+
+.Titulo-derecho h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111111;
+    margin: 0;
+}
+
+.info .informacion {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.info .informacion p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+}
