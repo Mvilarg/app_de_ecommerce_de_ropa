@@ -74,7 +74,7 @@ body {
 }
 
 
-/* 📦 Contenedor general de la lista */
+
 .detalle {
     display: flex;
     flex-direction: column;
@@ -85,40 +85,40 @@ body {
     background-color: #ffffff;
 }
 
-/* 🎴 Estilo unificado de las tarjetas con tu nueva clase */
+
 .detalle .producto-tarjeta {
     display: flex;
-    flex-direction: row;        /* ↔️ Imagen, texto y botones en la misma línea */
-    align-items: center;        /* Centra verticalmente los elementos */
-    justify-content: space-between; /* ↔️ Empuja el contador al extremo derecho */
+    flex-direction: row;        
+    align-items: center;        
+    justify-content: space-between; 
     width: 100%;
     padding: 15px 0;
     box-sizing: border-box;
-    border-bottom: 1px solid #f7f7f7; /* Línea divisoria */
+    border-bottom: 1px solid #f7f7f7; 
 }
 
-/* 🖼️ Contenedor de la miniatura */
+
 .detalle .imagen1 {
     width: 85px;
     height: 85px;
     border-radius: 18px;
     overflow: hidden;
-    flex-shrink: 0;             /* Evita que la foto se aplaste */
+    flex-shrink: 0;             
 }
 
 .detalle .imagen1 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;          /* Centra la imagen estéticamente */
+    object-fit: cover;          
 }
 
-/* 📝 Bloque central de Textos */
+
 .detalle .info {
     display: flex;
-    flex-direction: column;     /* ⬇️ Apila título, categoría y precio hacia abajo */
+    flex-direction: column;    
     gap: 4px;
     margin-left: 16px;
-    flex-grow: 1;               /* Toma el espacio del centro */
+    flex-grow: 1;               
 }
 
 .detalle .info h2 {
@@ -146,19 +146,19 @@ body {
     color: #111111;
 }
 
-/* 🔢 El Contador de Cantidad (- 1 +) */
+
 .detalle .botones {
     display: flex;
-    flex-direction: row;        /* ↔️ Mantiene los iconos y el número en fila */
+    flex-direction: row;        
     align-items: center;
     justify-content: space-between;
-    background-color: #f7f7f7;  /* Fondo tipo cápsula */
+    background-color: #f7f7f7;  
     padding: 6px 12px;
     border-radius: 30px;
     gap: 12px;
     min-width: 80px;
     box-sizing: border-box;
-    flex-shrink: 0;             /* Protege los botones de deformaciones */
+    flex-shrink: 0;             
     margin-left: 10px;
 }
 
@@ -174,4 +174,127 @@ body {
     height: 12px;
     object-fit: contain;
     cursor: pointer;
+}
+
+
+.resumen {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;                  
+    background-color: #ffffff;
+}
+
+
+.resumen .resumen-titulo {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 4px 0;
+}
+
+
+.resumen .metodo-pago {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #f5f5f5;   
+    padding: 16px 20px;
+    border-radius: 16px;         
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.resumen .pago-detalles {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.resumen .logo-visa {
+    width: 35px;
+    height: auto;
+    object-fit: contain;
+}
+
+.resumen .numero-tarjeta {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111111;
+}
+
+.resumen .flecha-abajo {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+
+.desglose-precios {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;                 
+    margin-top: 10px;
+}
+
+
+.desglose-precios .fila-precio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.desglose-precios .fila-precio p {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+.desglose-precios .titems, 
+.desglose-precios .tdescuento {
+    color: #666666;
+}
+
+
+.desglose-precios .preciot, 
+.desglose-precios .pdescuento {
+    font-weight: 600;
+    color: #111111;
+}
+
+
+.desglose-precios .linea-separadora {
+    border: none;
+    border-top: 1px solid #f0f0f0;
+    margin: 8px 0;
+    width: 100%;
+}
+
+
+.desglose-precios .subtotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* "Sub Total" en texto */
+.desglose-precios .subtotal .stotal {
+    font-size: 15px;
+    font-weight: 500;
+    color: #111111;
+    margin: 0;
+}
+
+/* El monto final destacado en negrita */
+.desglose-precios .subtotal .sptotal {
+    font-size: 16px;
+    font-weight: 700;       /* Más marcado como la referencia */
+    color: #111111;
+    margin: 0;
 }
