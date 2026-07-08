@@ -1,0 +1,409 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: "Encode";
+    src: url(../storage/font/EncodeSans-VariableFont_wdth\,wght.ttf);
+}
+body {
+    background-color: white;
+    color: #121111;
+    font-family: "Encode", sans-serif;
+    padding-bottom: 90px;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   1. ESTILOS PARA CELULAR
+   ========================================== */
+
+nav {
+    background-color: transparent;
+    width: 100%;
+    z-index: 100;
+}
+
+nav.barraNavegacion {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    background-color: #292526;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+nav ul.menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav ul.menu span{
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul.menu img{
+    width: 25px;
+    height: 25px;
+}
+
+.Usuario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.usuario-textos p{
+    text-align: left;
+    font-size: 14px;
+    color: #8e8e8e;
+    margin: 0;
+}
+
+.usuario-textos h1{
+    text-align: left;
+    font-size: 20px;
+    color: #111111;
+    margin: 5px 0 0 0;
+}
+
+.Usuario img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.search {
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap:15px;
+}
+
+.form input {
+    flex-grow: 1;
+    height: 45px;
+    border-radius: 10px;
+    border: 2px solid #f2f2f2;
+    padding-left: 40px;
+    color: #121111;
+    font-size: 14px;
+}
+
+.form button{
+    background-color: #121111;
+    height: 45px ;
+    width: 45px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form img {
+    width: 20px;
+    height: 20px;
+}
+
+.categorias {
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.categorias::-webkit-scrollbar{
+    display: none;
+}
+
+.categorias ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 12px;
+}
+
+.categorias ul li {
+    flex-shrink: 0;
+}
+
+.categorias button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #f7f7f7;
+    border: 1px solid #eaeaea;
+    border-radius: 30px;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.categorias button:hover{
+    background-color: #d4d4d4;
+    color: #000000;
+}
+
+.categorias button img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.categorias button.active {
+    background-color: #121111;
+    border-color: #121111;
+    color: #ffffff;
+}
+
+.productos {
+    display: grid;
+    /* Crea dos columnas automáticas que se adaptan al ancho del celular */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.productos article {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productos .visual {
+    position: relative; /* 📌 Clave para poder flotar el corazón adentro */
+    width: 100%;
+    background-color: #f7f7f7; /* Fondo gris claro por si la foto tiene transparencias */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.productos .visual > img:first-child {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Evita que la foto de la ropa se distorsione */
+    object-position: center;
+    display: block;
+}
+
+.productos .visual > img:last-child {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 28px;
+    height: 28px;
+    background-color: rgba(5, 5, 5); /* Fondo blanco sutil con transparencia */
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.productos .informacion {
+    padding: 10px 5px 5px 5px;
+}
+
+.productos .informacion h3 {
+    font-size: 14px;
+    color: #111111;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+    /* Truco para que el texto largo no rompa la tarjeta y ponga puntos suspensivos (...) */
+  
+}
+
+.productos .informacion p {
+    font-size: 11px;
+    color: #8e8e8e;
+    margin: 0;
+}
+
+.productos .preciop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin-top: auto;
+}
+
+.productos .preciop p {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+}
+
+.productos .preciop span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #111111;
+}
+
+.productos .preciop span img {
+    width: 14px;
+    height: 14px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+
+}
+
+footer p {
+    text-align: center;
+    font-size: 15px;
+    color: #111111;
+    
+}
+
+/* ==========================================
+     2. ESTILOS PARA ESCRITORIO
+     ========================================== */
+
+@media (min-width: 1024px) {
+
+     nav.barraNavegacion {
+        position: fixed;          
+        top: 20px;                     
+        bottom: auto;                
+        width: 100%;                 
+        height: auto;                
+        
+    }
+
+    nav ul.menu {
+        display: flex;
+        flex-direction: row;         
+        justify-content: center;     
+        align-items: center;
+        gap: 40px;                   
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul.menu li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #ffffff;
+    }
+
+    nav ul.menu span {
+        display: inline;             
+        color: #ffffff;
+    }
+
+    nav ul.menu a {
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+    }
+
+    nav ul.menu li a img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px ;
+    }
+
+    main {
+        margin-left: 0;   
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+     .Usuario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    padding-top: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
+    }
+
+    .usuario-textos p{
+    text-align: left;
+    font-size: 14px;
+    color: #8e8e8e;
+    margin: 0;
+    }
+
+    .usuario-textos h1{
+    text-align: left;
+    font-size: 20px;
+    color: #111111;
+    margin: 5px 0 0 0;
+    }
+
+    .Usuario img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+
+    .productos {
+        /* En pantallas de computadora, expande el catálogo a 4 columnas perfectas */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px; /* Un poco más de espacio entre tarjetas */
+        padding: 30px;
+    }
+    
+    .productos .visual > img:first-child {
+        height: 600px; /* Fotos un poco más grandes en escritorio */
+        
+    }
+
+}
