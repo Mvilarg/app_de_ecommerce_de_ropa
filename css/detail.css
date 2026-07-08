@@ -294,3 +294,44 @@ footer p {
     color: #a3a1a2;
     
 }
+
+/* ==========================================
+     2. ESTILOS PARA ESCRITORIO
+     ========================================== */
+
+@media (min-width: 1024px) {
+   
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide la pantalla en dos mitades perfectas */
+        grid-template-rows: auto auto auto; /* Define las filas para el contenido de la derecha */
+        gap: 20px 60px;          /* 20px de espacio vertical, 60px de separación entre columnas */
+        max-width: 1100px;
+        margin: 100px auto 40px auto; /* Centra el diseño y baja para no chocar con el navbar */
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+
+    /* 🖼️ COLUMNNA IZQUIERDA: La sección de la Foto */
+    .producto {
+        grid-column: 1;          /* Fuerza a la foto a quedarse en la columna 1 */
+        grid-row: 1 / span 3;    /* Hace que la foto sea alta y ocupe el espacio de 3 filas */
+        position: relative;
+        padding: 0;
+        width: 100%;
+    }
+
+    .producto .foto-principal {
+        width: 100%;
+        height: 520px;            /* Altura imponente para que luzca la foto */
+        object-fit: cover;
+        border-radius: 25px;      /* Esquinas redondeadas */
+        display: block;
+    }
+
+    /* Ajuste de botones flotantes sobre la foto */
+    .producto .btn-flotante { top: 20px; }
+    .producto .btn-atras { left: 20px; }
+    .producto .btn-favorito { right: 20px; }
+
+}
