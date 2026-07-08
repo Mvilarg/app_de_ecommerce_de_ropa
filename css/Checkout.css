@@ -16,3 +16,59 @@ body {
     padding-bottom: 90px;
     box-sizing: border-box;
 }
+
+/* ==========================================
+   1. ESTILOS PARA CELULAR
+   ========================================== */
+
+  
+.checkout-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;         
+    justify-content: space-between; 
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;  
+    box-sizing: border-box;
+}
+
+
+.checkout-titulo h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+    text-align: center;
+}
+
+
+.checkout-header .btn-redondo {
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff;
+    border: 1px solid #f0f0f0;   
+    border-radius: 50%;          
+    display: flex;               
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); 
+}
+
+
+.checkout-header .btn-redondo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+
+.checkout-header .btn-redondo img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
