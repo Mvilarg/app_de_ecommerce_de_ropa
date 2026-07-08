@@ -102,7 +102,7 @@ body {
     line-height: 1.2;
 }
 
-/* 🌟 Tu clase personalizada corregida en fila horizontal */
+
 .Titulo-izquierdo .raiting {
     display: flex;
     flex-direction: row; 
@@ -155,4 +155,59 @@ body {
     color: #666666;
     line-height: 1.6;
     margin: 0;
+}
+
+/* 👟 Contenedor general de la sección */
+.Personalizar {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* 🏷️ Título "Elige tu talla" */
+.Personalizar h3.derecho {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 15px 0; /* Espacio abajo para separar el título de los círculos */
+}
+
+/* 📋 La lista: la volvemos fila horizontal y permitimos que salte de línea si faltan pantallas chicas */
+.Personalizar ul.tallas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;        /* 🔄 Si pones muchas tallas, saltan abajo ordenadamente sin romperse */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 12px;              /* Espaciado elegante entre cada burbuja de talla */
+}
+
+/* ⚪ Cada burbuja de talla por defecto (Desactivada) */
+.Personalizar ul.tallas li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;            /* Ancho y alto idénticos para hacer un círculo perfecto */
+    height: 44px;
+    border: 1px solid #e0e0e0; /* Borde gris sutil */
+    border-radius: 50%;     /* Círculo perfecto */
+    font-size: 14px;
+    font-weight: 500;
+    color: #555555;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.Personalizar ul.tallas li.activa {
+    background-color: #292526; 
+    color: #ffffff;            
+    border-color: #292526;
+    font-weight: 600;
+}
+
+.Personalizar ul.tallas li:hover:not(.activa) {
+    border-color: #111111;
+    color: #111111;
 }
