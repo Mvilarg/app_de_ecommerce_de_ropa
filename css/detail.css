@@ -59,6 +59,15 @@ body {
     left: 30px;
 }
 
+.btn-atras a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Evita cualquier efecto visual de enlace */
+}
+
 .producto .btn-favorito {
     right: 30px;
 }
