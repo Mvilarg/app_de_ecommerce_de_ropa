@@ -278,3 +278,19 @@ body {
     display: flex;
     justify-content: center;
 }
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    padding: 20px;
+
+}
+
+footer p {
+    text-align: center;
+    font-size: 15px;
+    color: #a3a1a2;
+    
+}
