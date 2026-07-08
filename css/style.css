@@ -286,6 +286,10 @@ nav ul.menu img{
     height: 14px;
 }
 
+.productos a {
+    text-decoration: none;
+}
+
 footer{
     display: flex;
     align-items: center;
