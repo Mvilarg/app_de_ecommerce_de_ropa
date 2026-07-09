@@ -1,308 +1,343 @@
+/* Restablecimiento general de márgenes y modelo de caja */
 * { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+    margin: 0; /* Elimina los márgenes predeterminados de todos los elementos */
+    padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho total del elemento */
 }
 
+/* Importación de tipografía local */
 @font-face {
-    font-family: "Encode";
-    src: url(../storage/font/EncodeSans-VariableFont_wdth\,wght.ttf);
+    font-family: "Encode"; /* Define el nombre de la familia tipográfica personalizada */
+    src: url(../storage/font/EncodeSans-VariableFont_wdth\,wght.ttf); /* Especifica la ruta del archivo de la fuente */
 }
+
+/* Estilos globales del cuerpo de la página */
 body {
-    background-color: white;
-    color: #121111;
-    font-family: "Encode", sans-serif;
-    padding-bottom: 90px;
-    box-sizing: border-box;
+    background-color: white; /* Establece el color de fondo de la página en blanco */
+    color: #121111; /* Define el color principal del texto en un tono negro sutil */
+    font-family: "Encode", sans-serif; /* Aplica la fuente personalizada o una genérica sin serifa */
+    padding-bottom: 90px; /* Añade un espacio inferior para evitar que el menú flotante tape el contenido */
+    box-sizing: border-box; /* Aplica el modelo de caja de tamaño completo al cuerpo */
 }
 
 /* ==========================================
    1. ESTILOS PARA CELULAR
    ========================================== */
 
+/* Contenedor general de navegación */
 nav {
-    background-color: transparent;
-    width: 100%;
-    z-index: 100;
+    background-color: transparent; /* Hace que el fondo del contenedor nav sea invisible */
+    width: 100%; /* Expande el elemento a todo el ancho disponible */
+    z-index: 100; /* Posiciona el elemento por encima de otros elementos en el eje Z */
 }
 
+/* Barra flotante fija inferior para dispositivos móviles */
 nav.barraNavegacion {
-    display: flex;
-    position: fixed;
-    bottom: 20px;
-    justify-content: center;
-    align-items: center;
-    padding: 0.8rem 2rem;
-    width: 85%;
-    max-width: 1200px;
-    margin: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50px;
-    background-color: #292526;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex; /* Activa el modelo de caja flexible para alinear los elementos internos */
+    position: fixed; /* Mantiene la barra fija en la pantalla durante el desplazamiento */
+    bottom: 20px; /* Separa la barra 20 píxeles del borde inferior de la pantalla */
+    justify-content: center; /* Distribuye los elementos en el centro del eje horizontal */
+    align-items: center; /* Alinea los elementos en el centro del eje vertical */
+    padding: 0.8rem 2rem; /* Añade relleno interno arriba/abajo (0.8rem) y a los lados (2rem) */
+    width: 85%; /* Define el ancho de la barra en un 85% de la pantalla */
+    max-width: 1200px; /* Restringe el ancho máximo de la barra a 1200 píxeles */
+    margin: 0; /* Remueve los márgenes alrededor del contenedor */
+    left: 50%; /* Posiciona el borde izquierdo justo en la mitad de la pantalla */
+    transform: translateX(-50%); /* Desplaza la barra hacia la izquierda para centrarla perfectamente */
+    border-radius: 50px; /* Redondea los bordes externos de la barra dándole estilo de cápsula */
+    background-color: #292526; /* Aplica un color de fondo gris oscuro mate */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Añade una sombra sutil para dar efecto de elevación */
 }
 
+/* Lista del menú interior de la navegación */
 nav ul.menu {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 25px;
-    width: 100%;
-    justify-content: space-around;
+    display: flex; /* Usa flexbox para alinear las opciones en formato fila */
+    list-style: none; /* Quita los viñetas o puntos de la lista */
+    align-items: center; /* Centra verticalmente los elementos de la lista */
+    gap: 25px; /* Define una separación constante de 25 píxeles entre opciones */
+    width: 100%; /* Ocupa la totalidad del ancho de su contenedor padre */
+    justify-content: space-around; /* Reparte el espacio de forma equitativa entre los elementos */
 }
 
+/* Ocultar etiquetas de texto de navegación en versión móvil */
 nav ul.menu span{
-    display: none;
-    padding: 0;
-    margin: 0;
+    display: none; /* Esconde completamente el texto de las opciones en pantallas pequeñas */
+    padding: 0; /* Remueve cualquier relleno interno */
+    margin: 0; /* Remueve cualquier margen interno */
 }
 
+/* Dimensiones de iconos de la navegación */
 nav ul.menu img{
-    width: 25px;
-    height: 25px;
+    width: 25px; /* Define el ancho estático del icono en 25 píxeles */
+    height: 25px; /* Define el alto estático del icono en 25 píxeles */
 }
 
+/* Sección superior de perfil de usuario */
 .Usuario{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
+    display: flex; /* Activa flexbox para colocar el texto y la imagen a los extremos */
+    justify-content: space-between; /* Empuja el texto a la izquierda y la foto a la derecha */
+    align-items: center; /* Alinea de forma vertical los elementos internos */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 20px; /* Crea un colchón interno de 20 píxeles en todos los lados */
 }
 
+/* Texto secundario de bienvenida */
 .usuario-textos p{
-    text-align: left;
-    font-size: 14px;
-    color: #8e8e8e;
-    margin: 0;
+    text-align: left; /* Alinea el texto del saludo hacia la izquierda */
+    font-size: 14px; /* Define el tamaño de letra del saludo en 14 píxeles */
+    color: #8e8e8e; /* Aplica un tono gris claro al texto */
+    margin: 0; /* Elimina los márgenes predeterminados del párrafo */
 }
 
+/* Título con el nombre de usuario */
 .usuario-textos h1{
-    text-align: left;
-    font-size: 20px;
-    color: #111111;
-    margin: 5px 0 0 0;
+    text-align: left; /* Alinea el nombre del usuario hacia la izquierda */
+    font-size: 20px; /* Define un tamaño de letra de 20 píxeles para el nombre */
+    color: #111111; /* Aplica un color negro intenso al nombre */
+    margin: 5px 0 0 0; /* Añade únicamente un margen de 5 píxeles en la parte superior */
 }
 
+/* Imagen circular de perfil de usuario */
 .Usuario img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 50px; /* Define un ancho de 50 píxeles para la fotografía */
+    height: 50px; /* Define un alto de 50 píxeles para la fotografía */
+    border-radius: 50%; /* Corta los bordes de la imagen al 50% para hacerla redonda */
+    object-fit: cover; /* Recorta la imagen proporcionalmente para llenar el espacio sin deformarse */
 }
 
+/* Contenedor del buscador */
 .search {
-    width: 100%;
-    padding: 10px 20px;
+    width: 100%; /* Ocupa el ancho completo disponible */
+    padding: 10px 20px; /* Da un espaciado de 10px arriba/abajo y 20px en los costados */
 }
 
+/* Alineación del formulario de búsqueda */
 .form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap:15px;
+    display: flex; /* Utiliza flexbox para colocar el input y el botón en la misma fila */
+    flex-direction: row; /* Fuerza la orientación horizontal de los elementos */
+    align-items: center; /* Alinea verticalmente el input con el botón */
+    justify-content: space-between; /* Distribuye el espacio máximo entre el input y el botón */
+    width: 100%; /* Expande el formulario al ancho total de su sección */
+    gap: 15px; /* Separa el campo de entrada del botón por 15 píxeles */
 }
 
+/* Campo de entrada de la búsqueda */
 .form input {
-    flex-grow: 1;
-    height: 45px;
-    border-radius: 10px;
-    border: 2px solid #f2f2f2;
-    padding-left: 40px;
-    color: #121111;
-    font-size: 14px;
+    flex-grow: 1; /* Permite al input expandirse y ocupar todo el espacio libre restante */
+    height: 45px; /* Establece la altura del campo en 45 píxeles */
+    border-radius: 10px; /* Suaviza las esquinas del input con un radio de 10 píxeles */
+    border: 2px solid #f2f2f2; /* Coloca un borde delgado de color gris muy claro */
+    padding-left: 40px; /* Añade espacio interno a la izquierda para que el texto no toque el borde */
+    color: #121111; /* Define el color del texto escrito */
+    font-size: 14px; /* Establece el tamaño de la letra del texto ingresado */
 }
 
+/* Botón de enviar del buscador */
 .form button{
-    background-color: #121111;
-    height: 45px ;
-    width: 45px;
-    border-radius: 10px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    background-color: #121111; /* Da un fondo negro al botón */
+    height: 45px ; /* Aplica una altura de 45 píxeles para igualar al input */
+    width: 45px; /* Asigna un ancho de 45 píxeles creando una caja cuadrada */
+    border-radius: 10px; /* Suaviza las esquinas del botón con un radio de 10 píxeles */
+    border: none; /* Elimina el borde gris por defecto del botón */
+    display: flex; /* Activa flexbox para centrar la imagen dentro */
+    justify-content: center; /* Centra horizontalmente el icono de ajustes */
+    align-items: center; /* Centra verticalmente el icono de ajustes */
+    cursor: pointer; /* Cambia el cursor al icono de mano indicando que es clickeable */
 }
 
+/* Icono dentro del botón de búsqueda */
 .form img {
-    width: 20px;
-    height: 20px;
+    width: 20px; /* Define el ancho del icono de ajustes en 20 píxeles */
+    height: 20px; /* Define el alto del icono de ajustes en 20 píxeles */
 }
 
+/* Carrusel horizontal de categorías de productos */
 .categorias {
-    width: 100%;
-    padding: 15px 20px;
-    box-sizing: border-box;
-    overflow-x: auto;
-    scrollbar-width: none;
+    width: 100%; /* Ajusta el elemento al ancho de la pantalla */
+    padding: 15px 20px; /* Añade márgenes internos para dar espacio a los botones */
+    box-sizing: border-box; /* Mantiene la consistencia de las dimensiones totales */
+    overflow-x: auto; /* Permite el deslizamiento horizontal si los botones desbordan la pantalla */
+    scrollbar-width: none; /* Oculta visualmente la barra de desplazamiento en Firefox */
 }
 
+/* Ocultar barra de desplazamiento en navegadores WebKit (Chrome, Safari, Edge) */
 .categorias::-webkit-scrollbar{
-    display: none;
+    display: none; /* Oculta por completo la barra de scroll inferior en estos navegadores */
 }
 
+/* Contenedor de elementos de categoría */
 .categorias ul{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 12px;
+    display: flex; /* Alinea los elementos `li` uno al lado del otro de forma horizontal */
+    flex-direction: row; /* Establece explícitamente la dirección en fila */
+    list-style: none; /* Remueve los puntos por defecto de la lista */
+    padding: 0; /* Quita el relleno izquierdo por defecto de las listas */
+    margin: 0; /* Quita los márgenes por defecto */
+    gap: 12px; /* Separa cada botón de categoría por 12 píxeles */
 }
 
+/* Bloqueo de encogimiento de items del carrusel */
 .categorias ul li {
-    flex-shrink: 0;
+    flex-shrink: 0; /* Impide que los elementos de la lista se compriman o deformen */
 }
 
+/* Botones de filtros de categoría */
 .categorias button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    background-color: #f7f7f7;
-    border: 1px solid #eaeaea;
-    border-radius: 30px;
-    color: #666666;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    display: flex; /* Alinea el icono y el texto interior horizontalmente */
+    align-items: center; /* Centra verticalmente el icono con el texto */
+    gap: 8px; /* Agrega un espacio de 8 píxeles entre el icono y la palabra */
+    padding: 10px 16px; /* Da relleno de 10px arriba/abajo y 16px a los lados */
+    background-color: #f7f7f7; /* Aplica un fondo gris muy tenue */
+    border: 1px solid #eaeaea; /* Agrega un borde fino para delimitar el botón */
+    border-radius: 30px; /* Convierte el botón en un formato de óvalo/píldora */
+    color: #666666; /* Usa un color de texto gris neutro */
+    font-size: 14px; /* Define el tamaño de fuente en 14 píxeles */
+    font-weight: 500; /* Aplica un grosor de letra medio */
+    cursor: pointer; /* Transforma el puntero en mano para indicar interactividad */
+    transition: all 0.2s ease; /* Aplica una animación suave de 0.2 segundos al cambiar de estado */
 }
 
+/* Transición hover sobre botones de categoría */
 .categorias button:hover{
-    background-color: #d4d4d4;
-    color: #000000;
+    background-color: #d4d4d4; /* Oscurece el fondo a gris cuando el cursor pasa por encima */
+    color: #000000; /* Cambia el color del texto a negro puro */
 }
 
+/* Imágenes e iconos internos de las categorías */
 .categorias button img {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
+    width: 18px; /* Ajusta el ancho del icono a 18 píxeles */
+    height: 18px; /* Ajusta el alto del icono a 18 píxeles */
+    object-fit: contain; /* Escala el icono para que se vea completo sin recortarse */
 }
 
+/* Estado activo del botón de categoría seleccionada */
 .categorias button.active {
-    background-color: #121111;
-    border-color: #121111;
-    color: #ffffff;
+    background-color: #121111; /* Pinta el fondo de negro para resaltar que está seleccionado */
+    border-color: #121111; /* Cambia el borde al mismo tono negro */
+    color: #ffffff; /* Pinta el texto de color blanco puro */
 }
 
+/* Rejilla cuadrícula del catálogo de productos en celular */
 .productos {
-    display: grid;
-    /* Crea dos columnas automáticas que se adaptan al ancho del celular */
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px;
-    padding: 20px;
-    box-sizing: border-box;
+    display: grid; /* Activa el sistema de diseño Grid Layout */
+    grid-template-columns: repeat(2, 1fr); /* Divide el catálogo en exactamente 2 columnas de igual tamaño */
+    gap: 20px; /* Crea una separación de 20 píxeles entre las tarjetas de forma vertical y horizontal */
+    padding: 20px; /* Deja un margen interno de seguridad en los bordes de la rejilla */
+    box-sizing: border-box; /* Integra el espaciado en el cálculo del ancho total */
 }
 
+/* Tarjeta individual de cada artículo */
 .productos article {
-    background-color: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: #ffffff; /* Otorga un fondo blanco a la tarjeta */
+    border-radius: 15px; /* Redondea las cuatro esquinas de la tarjeta */
+    overflow: hidden; /* Corta cualquier contenido interno que sobresalga de las esquinas */
+    display: flex; /* Convierte la tarjeta en un contenedor flexbox vertical */
+    flex-direction: column; /* Organiza la imagen, textos y precios en columna */
+    justify-content: space-between; /* Separa los bloques internos empujando los precios hacia el fondo */
 }
 
+/* Bloque contenedor de imágenes y botón de favorito */
 .productos .visual {
-    position: relative; /* 📌 Clave para poder flotar el corazón adentro */
-    width: 100%;
-    background-color: #f7f7f7; /* Fondo gris claro por si la foto tiene transparencias */
-    border-radius: 15px;
-    overflow: hidden;
+    position: relative; /* Funciona como eje de coordenadas para colocar elementos con posición absoluta */
+    width: 100%; /* Toma todo el ancho de la tarjeta */
+    background-color: #f7f7f7; /* Aplica fondo gris para cubrir transparencias de imágenes */
+    border-radius: 15px; /* Mantiene las esquinas de este bloque superior redondeadas */
+    overflow: hidden; /* Oculta imperfecciones visuales en las esquinas */
 }
 
+/* Imagen principal del producto */
 .productos .visual > img:first-child {
-    width: 100%;
-    height: 250px;
-    object-fit: cover; /* Evita que la foto de la ropa se distorsione */
-    object-position: center;
-    display: block;
+    width: 100%; /* Estira la imagen a todo el ancho de la tarjeta */
+    height: 250px; /* Fija la altura de la imagen en 250 píxeles */
+    object-fit: cover; /* Centra y encuadra la imagen recortando los excesos sin distorsión */
+    object-position: center; /* Enfoca el centro de la fotografía */
+    display: block; /* Elimina espacios vacíos inferiores nativos de las imágenes inline */
 }
 
+/* Icono flotante del botón favoritos sobre la imagen */
 .productos .visual > img:last-child {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 28px;
-    height: 28px;
-    background-color: rgba(5, 5, 5); /* Fondo blanco sutil con transparencia */
-    padding: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: absolute; /* Desconecta el elemento del flujo y lo hace flotar sobre la imagen */
+    top: 15px; /* Lo ubica a 15 píxeles medidos desde el borde superior */
+    right: 15px; /* Lo ubica a 15 píxeles medidos desde el borde derecho */
+    width: 28px; /* Ajusta el ancho total del círculo a 28 píxeles */
+    height: 28px; /* Ajusta el alto total del círculo a 28 píxeles */
+    background-color: rgba(5, 5, 5); /* Define un fondo de color negro */
+    padding: 8px; /* Genera separación interna para encoger el icono del corazón en el centro */
+    border-radius: 50%; /* Transforma la caja en un círculo perfecto */
+    cursor: pointer; /* Cambia el puntero del mouse al pasar por encima */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Añade una sombra ligera debajo del botón */
 }
 
+/* Bloque contenedor de los textos descriptivos */
 .productos .informacion {
-    padding: 10px 5px 5px 5px;
+    padding: 10px 5px 5px 5px; /* Asigna un margen interno asimétrico para los textos */
 }
 
+/* Título del producto */
 .productos .informacion h3 {
-    font-size: 14px;
-    color: #111111;
-    margin: 0 0 4px 0;
-    font-weight: 600;
-    /* Truco para que el texto largo no rompa la tarjeta y ponga puntos suspensivos (...) */
-  
+    font-size: 14px; /* Tamaño de letra de 14 píxeles para el nombre de la prenda */
+    color: #111111; /* Color negro para el título */
+    margin: 0 0 4px 0; /* Agrega un pequeño margen de 4 píxeles abajo */
+    font-weight: 600; /* Define un grosor de letra semi-negrita */
 }
 
+/* Enlace a categoría dentro de información */
 .productos .informacion p {
-    font-size: 11px;
-    color: #8e8e8e;
-    margin: 0;
+    font-size: 11px; /* Letra pequeña de 11 píxeles para la categoría */
+    color: #8e8e8e; /* Tono de color gris para darle menor jerarquía visual */
+    margin: 0; /* Quita márgenes por defecto */
 }
 
+/* Distribución horizontal inferior de precio y calificación */
 .productos .preciop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    margin-top: auto;
+    display: flex; /* Activa flexbox en la base de la tarjeta */
+    justify-content: space-between; /* Sitúa el precio a la izquierda y la estrella a la derecha */
+    align-items: center; /* Sincroniza las alturas de ambos elementos */
+    padding: 5px; /* Añade 5 píxeles de holgura */
+    margin-top: auto; /* Empuja de forma automática este contenedor hacia el extremo inferior */
 }
 
+/* Texto del precio destacado */
 .productos .preciop p {
-    font-size: 15px;
-    font-weight: 700;
-    color: #111111;
-    margin: 0;
+    font-size: 15px; /* Tamaño de letra de 15 píxeles */
+    font-weight: 700; /* Letra totalmente negrita (bold) para llamar la atención */
+    color: #111111; /* Color negro intenso */
+    margin: 0; /* Remueve márgenes */
 }
 
+/* Contenedor de la calificación con estrella */
 .productos .preciop span {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #111111;
+    display: flex; /* Alinea el icono de estrella horizontalmente junto al número */
+    align-items: center; /* Alinea la estrella verticalmente con el número */
+    gap: 4px; /* Separa el icono de estrella del número de puntuación por 4 píxeles */
+    font-size: 12px; /* Letra de 12 píxeles para el número */
+    font-weight: 600; /* Grosor de fuente medio tirando a alto */
+    color: #111111; /* Texto de color negro */
 }
 
+/* Dimensión del icono de estrella */
 .productos .preciop span img {
-    width: 14px;
-    height: 14px;
+    width: 14px; /* Asigna un ancho de 14 píxeles a la estrella */
+    height: 14px; /* Asigna un alto de 14 píxeles a la estrella */
 }
 
+/* Remoción del subrayado en enlaces del catálogo */
 .productos a {
-    text-decoration: none;
+    text-decoration: none; /* Quita la línea de subrayado azul por defecto de las etiquetas `<a>` */
 }
 
+/* Estructura del pie de página */
 footer{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-
+    display: flex; /* Activa flexbox en el footer */
+    align-items: center; /* Centra verticalmente el contenido del pie de página */
+    width: 100%; /* Ocupa la totalidad del ancho de pantalla */
+    padding: 20px; /* Otorga un margen interior uniforme de 20 píxeles */
 }
 
+/* Texto del copyright del footer */
 footer p {
-    text-align: center;
-    font-size: 15px;
-    color: #111111;
-    
+    text-align: center; /* Asegura el centrado del texto del párrafo */
+    font-size: 15px; /* Establece la letra en 15 píxeles */
+    color: #111111; /* Color negro estándar */
 }
 
 /* ==========================================
@@ -311,103 +346,112 @@ footer p {
 
 @media (min-width: 1024px) {
 
+    /* Reubicación de barra de navegación al tope superior */
      nav.barraNavegacion {
-        position: fixed;          
-        top: 20px;                     
-        bottom: auto;                
-        width: 100%;                 
-        height: auto;                
-        
+        position: fixed; /* Mantiene fija la barra en pantalla */
+        top: 20px; /* Cambia su anclaje fijándola a 20 píxeles de la parte superior */
+        bottom: auto; /* Anula la propiedad bottom usada en la versión de celular */
+        width: 100%; /* Asigna el ancho completo a la barra de navegación */
+        height: auto; /* Permite que el alto se calcule según los textos internos */
     }
 
+    /* Distribución en línea del menú de navegación principal */
     nav ul.menu {
-        display: flex;
-        flex-direction: row;         
-        justify-content: center;     
-        align-items: center;
-        gap: 40px;                   
-        width: 100%;
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        display: flex; /* Habilita el modo flexbox */
+        flex-direction: row; /* Coloca la navegación en formato de fila horizontal */
+        justify-content: center; /* Alinea el menú justo al centro de la pantalla */
+        align-items: center; /* Centra verticalmente las opciones */
+        gap: 40px; /* Aumenta el espacio entre botones a 40 píxeles en computadoras */
+        width: 100%; /* Abarca el total del contenedor */
+        list-style: none; /* Mantiene la remoción de viñetas */
+        padding: 0; /* Limpia rellenos */
+        margin: 0; /* Limpia márgenes */
     }
 
+    /* Elementos individuales de la lista del menú */
     nav ul.menu li {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #ffffff;
+        display: flex; /* Habilita flexbox para juntar icono y texto */
+        align-items: center; /* Alineación vertical perfecta */
+        gap: 10px; /* Agrega 10 píxeles de separación interna */
+        color: #ffffff; /* Pone el texto en color blanco */
     }
 
+    /* Mostrar textos de las opciones de navegación en escritorio */
     nav ul.menu span {
-        display: inline;             
-        color: #ffffff;
+        display: inline; /* Reactiva y muestra el texto oculto en móvil colocándolo en línea */
+        color: #ffffff; /* Fuerza el color del texto a blanco */
     }
 
+    /* Enlaces dentro del menú superior */
     nav ul.menu a {
-        text-decoration: none;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        gap: 10px;
+        text-decoration: none; /* Mantiene los enlaces sin subrayados */
+        align-items: center; /* Centrado vertical interno */
+        justify-content: center; /* Centrado horizontal interno */
+        display: flex; /* Convierte los enlaces en cajas flexibles */
+        gap: 10px; /* Distancia interna de 10 píxeles */
     }
 
+    /* Imágenes internas del enlace en el menú */
     nav ul.menu li a img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px ;
+        display: flex; /* Define la imagen como caja flexible */
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center; /* Centra el contenido verticalmente */
+        gap: 10px ; /* Espaciado interno */
     }
 
+    /* Ajuste de márgenes del cuerpo principal en escritorio */
     main {
-        margin-left: 0;   
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
+        margin-left: 0; /* Remueve márgenes laterales izquierdos */
+        width: 100%; /* Mantiene el ancho en 100% */
+        padding: 20px; /* Conserva un colchón perimetral de 20 píxeles */
+        box-sizing: border-box; /* Sostiene la precisión del modelo de caja */
     }
 
-     .Usuario{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    padding-top: 100px;
-    padding-right: 50px;
-    padding-left: 50px;
+    /* Sección usuario con espaciado ampliado para navbar fija superior */
+    .Usuario{
+        display: flex; /* Mantiene el esquema flexbox */
+        justify-content: space-between; /* Sostiene la separación a extremos */
+        align-items: center; /* Sostiene la alineación vertical */
+        width: 100%; /* Sostiene el ancho total */
+        padding: 20px; /* Sostiene el relleno base */
+        padding-top: 100px; /* Añade un gran margen superior de 100 píxeles para que la barra fija no cubra el texto */
+        padding-right: 50px; /* Amplía el margen a la derecha a 50 píxeles */
+        padding-left: 50px; /* Amplía el margen a la izquierda a 50 píxeles */
     }
 
+    /* Ajustes tipográficos del saludo de usuario */
     .usuario-textos p{
-    text-align: left;
-    font-size: 14px;
-    color: #8e8e8e;
-    margin: 0;
+        text-align: left; /* Alinea hacia la izquierda */
+        font-size: 14px; /* Conserva los 14 píxeles */
+        color: #8e8e8e; /* Conserva el tono gris */
+        margin: 0; /* Conserva margen cero */
     }
 
+    /* Ajustes tipográficos del nombre del usuario */
     .usuario-textos h1{
-    text-align: left;
-    font-size: 20px;
-    color: #111111;
-    margin: 5px 0 0 0;
+        text-align: left; /* Alinea hacia la izquierda */
+        font-size: 20px; /* Mantiene los 20 píxeles */
+        color: #111111; /* Mantiene el color negro */
+        margin: 5px 0 0 0; /* Conserva el margen de 5 píxeles arriba */
     }
 
+    /* Dimensión de imagen de perfil de usuario */
     .Usuario img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
+        width: 50px; /* Mantiene los 50 píxeles de ancho */
+        height: 50px; /* Mantiene los 50 píxeles de alto */
+        border-radius: 50%; /* Mantiene la imagen redonda */
+        object-fit: cover; /* Mantiene el reencuadre proporcional */
     }
 
+    /* Expansión de la cuadrícula de productos a 3 columnas */
     .productos {
-        /* En pantallas de computadora, expande el catálogo a 4 columnas perfectas */
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px; /* Un poco más de espacio entre tarjetas */
-        padding: 30px;
+        grid-template-columns: repeat(3, 1fr); /* Redefine el Grid a un formato de 3 columnas de igual ancho */
+        gap: 25px; /* Aumenta el canal de separación a 25 píxeles */
+        padding: 30px; /* Sube la holgura en pantallas de escritorio a 30 píxeles */
     }
     
+    /* Escalado de la altura de imágenes de producto */
     .productos .visual > img:first-child {
-        height: 600px; /* Fotos un poco más grandes en escritorio */
-        
+        height: 600px; /* Amplía radicalmente el tamaño vertical de las fotos de ropa a 600 píxeles */
     }
-
 }
