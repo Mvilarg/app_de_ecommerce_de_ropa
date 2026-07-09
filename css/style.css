@@ -452,6 +452,6 @@ footer p {
     
     /* Escalado de la altura de imágenes de producto */
     .productos .visual > img:first-child {
-        height: 600px; /* Amplía radicalmente el tamaño vertical de las fotos de ropa a 600 píxeles */
+        height: 600px; /* Amplía  el tamaño vertical de las fotos de ropa a 600 píxeles */
     }
 }

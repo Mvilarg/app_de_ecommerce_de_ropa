@@ -1,307 +1,325 @@
+/* Restablecimiento general de márgenes y modelo de caja */
 * { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+    margin: 0; /* Elimina los márgenes predeterminados de todos los elementos */
+    padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho total del elemento */
 }
 
+/* Importación de tipografía local */
 @font-face {
-    font-family: "Encode";
-    src: url(../storage/font/EncodeSans-VariableFont_wdth\,wght.ttf);
+    font-family: "Encode"; /* Define el nombre de la familia tipográfica personalizada */
+    src: url(../storage/font/EncodeSans-VariableFont_wdth\,wght.ttf); /* Especifica la ruta del archivo de la fuente */
 }
+
+/* Estilos globales del cuerpo de la página */
 body {
-    background-color: white;
-    color: #121111;
-    font-family: "Encode", sans-serif;
-    padding-bottom: 90px;
-    box-sizing: border-box;
+    background-color: white; /* Establece el color de fondo de la página en blanco */
+    color: #121111; /* Define el color principal del texto en un tono negro sutil */
+    font-family: "Encode", sans-serif; /* Aplica la fuente personalizada o una genérica sin serifa */
+    padding-bottom: 90px; /* Añade un espacio inferior para evitar que el menú flotante tape el contenido */
+    box-sizing: border-box; /* Aplica el modelo de caja de tamaño completo al cuerpo */
 }
 
 /* ==========================================
    1. ESTILOS PARA CELULAR
    ========================================== */
 
-   
+/* Contenedor principal del bloque de la imagen */
 .producto {
-    position: relative;       
-    width: 100%;
-    padding: 15px;             
-    box-sizing: border-box;
+    position: relative; /* Funciona como eje de coordenadas para colocar elementos con posición absoluta */      
+    width: 100%; /* Expande el bloque a todo el ancho disponible */
+    padding: 15px; /* Deja un margen interno de seguridad de 15 píxeles */            
+    box-sizing: border-box; /* Integra el espaciado en el cálculo del ancho total */
 }
 
-
+/* Imagen principal del artículo en detalle */
 .producto .foto-principal {
-    width: 100%;
-    height: 380px;             
-    object-fit: cover;         
-    border-radius: 25px;       
-    display: block;
+    width: 100%; /* Estira la foto a todo el ancho de su contenedor */
+    height: 380px; /* Fija la altura de la imagen en 380 píxeles */            
+    object-fit: cover; /* Centra y encuadra la imagen recortando excesos sin distorsionarla */        
+    border-radius: 25px; /* Redondea fuertemente las cuatro esquinas de la imagen */      
+    display: block; /* Elimina espacios vacíos inferiores nativos de las imágenes inline */
 }
 
-
+/* Botones circulares flotantes sobre la imagen (Atrás y Favorito) */
 .producto .btn-flotante {
-    position: absolute;
-    top: 30px;                 
-    width: 40px;
-    height: 40px;
-    background-color: #ffffff; 
-    border-radius: 50%;        
-    display: flex;             
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    cursor: pointer;
-    z-index: 10;               
+    position: absolute; /* Desconecta los botones del flujo y los hace flotar sobre la imagen */
+    top: 30px; /* Los ubica a 30 píxeles medidos desde el borde superior de la sección */                
+    width: 40px; /* Define un ancho estático de 40 píxeles creando un cuadrado */
+    height: 40px; /* Define un alto estático de 40 píxeles creando un cuadrado */
+    background-color: #ffffff; /* Otorga un fondo blanco puro para resaltar sobre la foto */ 
+    border-radius: 50%; /* Transforma la caja en un círculo perfecto */        
+    display: flex; /* Activa el modelo flexbox para centrar el icono interior */            
+    justify-content: center; /* Centra horizontalmente el icono dentro del círculo */
+    align-items: center; /* Centra verticalmente el icono dentro del círculo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave para simular elevación */ 
+    cursor: pointer; /* Cambia el cursor al icono de mano indicando interactividad */
+    z-index: 10; /* Posiciona los botones por encima de la imagen en el eje Z */              
 }
 
-
+/* Posicionamiento específico del botón Atrás */
 .producto .btn-atras {
-    left: 30px;
+    left: 30px; /* Lo separa 30 píxeles del borde izquierdo de la sección */
 }
 
+/* Enlace contenedor dentro del botón Atrás */
 .btn-atras a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none; /* Evita cualquier efecto visual de enlace */
+    display: flex; /* Activa flexbox para centrar su contenido */
+    align-items: center; /* Centrado vertical de la imagen de retorno */
+    justify-content: center; /* Centrado horizontal de la imagen de retorno */
+    width: 100%; /* Utiliza el 100% del ancho del botón circular */
+    height: 100%; /* Utiliza el 100% del alto del botón circular */
+    text-decoration: none; /* Quita subrayados o efectos visuales por defecto del enlace */
 }
 
+/* Posicionamiento específico del botón Favorito */
 .producto .btn-favorito {
-    right: 30px;
+    right: 30px; /* Lo separa 30 píxeles del borde derecho de la sección */
 }
 
-
+/* Dimensiones de los iconos dentro de los botones flotantes */
 .producto .btn-flotante img {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
+    width: 18px; /* Ajusta el ancho del icono a 18 píxeles */
+    height: 18px; /* Ajusta el alto del icono a 18 píxeles */
+    object-fit: contain; /* Escala el icono para que se visualice completo sin deformarse */
 }
 
+/* Contenedor general de textos informativos */
 .info {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+    display: flex; /* Activa flexbox para organizar los bloques en formato columna */
+    flex-direction: column; /* Fuerza la orientación vertical de los elementos */
+    width: 100%; /* Ocupa el ancho completo disponible */
+    padding: 20px; /* Da un espaciado perimetral interno de 20 píxeles */
+    box-sizing: border-box; /* Mantiene la consistencia de las dimensiones totales */
 }
 
+/* Fila superior con el título del artículo y el contador de cantidad */
 .info-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    margin-bottom: 15px;
+    display: flex; /* Activa flexbox para colocar el título y el contador en fila */
+    flex-direction: row; /* Fuerza la orientación horizontal de los bloques */
+    justify-content: space-between; /* Empuja el título a la izquierda y el contador a la derecha */
+    align-items: flex-start; /* Alinea los elementos al tope superior de la fila */
+    width: 100%; /* Ocupa la totalidad del ancho disponible */
+    margin-bottom: 15px; /* Separa este bloque superior del párrafo de descripción por 15 píxeles */
 }
 
+/* Bloque izquierdo que contiene el título y la calificación */
 .Titulo-izquierdo {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 70%;
+    display: flex; /* Convierte el bloque en una caja flexible vertical */
+    flex-direction: column; /* Organiza el título arriba de la calificación */
+    gap: 8px; /* Separa el título de las estrellas por 8 píxeles */
+    width: 70%; /* Restringe el ancho al 70% para no chocar con el contador de la derecha */
 }
 
+/* Título principal del producto */
 .Titulo-izquierdo h1 {
-    font-size: 22px;
-    font-weight: 700;
-    color: #111111;
-    margin: 0;
-    line-height: 1.2;
+    font-size: 22px; /* Establece el tamaño de la letra del título en 22 píxeles */
+    font-weight: 700; /* Aplica una letra totalmente en negrita (bold) */
+    color: #111111; /* Pinta el texto en un color negro intenso */
+    margin: 0; /* Remueve los márgenes predeterminados */
+    line-height: 1.2; /* Reduce el espacio entre líneas para títulos que se dividen en dos renglones */
 }
 
-
+/* Contenedor horizontal de la calificación y cantidad de reviews */
 .Titulo-izquierdo .raiting {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    gap: 8px;
+    display: flex; /* Activa flexbox para colocar la estrella y el texto juntos */
+    flex-direction: row; /* Establece la dirección en fila horizontal */
+    align-items: center; /* Alinea verticalmente la estrella con las letras */
+    gap: 8px; /* Agrega una separación de 8 píxeles entre la estrella y las reseñas */
 }
 
+/* Elemento contenedor del icono de estrella y su nota numérica */
 .Titulo-izquierdo .raiting span {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #000000;
+    display: flex; /* Une el icono de estrella con el número mediante flexbox */
+    align-items: center; /* Sincroniza las alturas de la estrella y el número */
+    gap: 4px; /* Separa el icono de estrella del número de puntuación por 4 píxeles */
+    font-size: 14px; /* Define el tamaño de letra en 14 píxeles */
+    font-weight: 600; /* Aplica un grosor de letra semi-negrita */
+    color: #000000; /* Color negro puro para el número */
 }
 
+/* Texto del total de opiniones de clientes */
 .Titulo-izquierdo .raiting p {
-    font-size: 13px;
-    color: #2544cf;
-    margin: 0;
+    font-size: 13px; /* Tamaño de letra de 13 píxeles */
+    color: #2544cf; /* Aplica un tono azul llamativo para destacar que es un enlace o dato importante */
+    margin: 0; /* Remueve márgenes */
 }
 
+/* Contador incremental de cantidad (Botones +/- y número) */
 .Titulo-derecho {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f7f7f7;
-    padding: 8px 14px;
-    border-radius: 30px;
-    gap: 14px;
-    width: 95px;
-    box-sizing: border-box;
+    display: flex; /* Activa flexbox para colocar los botones de más, menos y la cantidad */
+    flex-direction: row; /* Coloca los tres elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los botones con el número */
+    justify-content: space-between; /* Distribuye el espacio eficientemente entre los 3 elementos */
+    background-color: #f7f7f7; /* Aplica un color de fondo gris claro al contenedor del contador */
+    padding: 8px 14px; /* Da un relleno de 8px arriba/abajo y 14px a los lados */
+    border-radius: 30px; /* Convierte el contenedor en una píldora estilizada */
+    gap: 14px; /* Asegura una separación de 14 píxeles entre los elementos */
+    width: 95px; /* Asigna un ancho fijo de 95 píxeles a todo el bloque contador */
+    box-sizing: border-box; /* Asegura que el padding no altere los 95px de ancho */
 }
 
+/* Número indicador de la cantidad actual seleccionada */
 .Titulo-derecho h2 {
-    font-size: 16px;
-    font-weight: 600;
-    color: #111111;
-    margin: 0;
+    font-size: 16px; /* Define un tamaño de letra de 16 píxeles */
+    font-weight: 600; /* Grosor de fuente medio tirando a alto */
+    color: #111111; /* Color negro estándar */
+    margin: 0; /* Elimina márgenes */
 }
 
+/* Bloque contenedor de la descripción del producto */
 .info .informacion {
-    width: 100%;
-    margin-top: 15px;
+    width: 100%; /* Ocupa el ancho total asignado */
+    margin-top: 15px; /* Separa este bloque de la fila del encabezado */
 }
 
+/* Párrafo descriptivo del producto */
 .info .informacion p {
-    font-size: 14px;
-    color: #666666;
-    line-height: 1.6;
-    margin: 0;
+    font-size: 14px; /* Define el tamaño de letra en 14 píxeles */
+    color: #666666; /* Aplica un color gris suave para que la lectura sea descansada */
+    line-height: 1.6; /* Aumenta el interlineado a 1.6 para una mejor legibilidad del texto */
+    margin: 0; /* Elimina márgenes */
 }
 
-
+/* Sección para la selección de tallas del calzado */
 .Personalizar {
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
+    padding: 20px; /* Deja un colchón interno homogéneo de 20 píxeles en todos sus lados */
+    box-sizing: border-box; /* Mantiene la precisión de las dimensiones globales */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
 
-
+/* Subtítulo de indicación para elegir talla */
 .Personalizar h3.derecho {
-    font-size: 16px;
-    font-weight: 700;
-    color: #111111;
-    margin: 0 0 15px 0; 
+    font-size: 16px; /* Establece la fuente en 16 píxeles */
+    font-weight: 700; /* Letra totalmente negrita (bold) */
+    color: #111111; /* Color negro intenso */
+    margin: 0 0 15px 0; /* Añade únicamente un margen inferior de 15 píxeles para separar de la lista */
 }
 
-
+/* Lista contenedora de los botones circulares de tallas */
 .Personalizar ul.tallas {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;        
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 12px;              
+    display: flex; /* Activa flexbox para colocar las opciones en una cuadrícula fluida */
+    flex-direction: row; /* Coloca inicialmente las tallas en fila horizontal */
+    flex-wrap: wrap; /* Permite que las tallas bajen al siguiente renglón si la pantalla es angosta */       
+    list-style: none; /* Quita los viñetas o puntos de la lista */
+    padding: 0; /* Remueve rellenos de lista nativos */
+    margin: 0; /* Remueve márgenes de lista nativos */
+    gap: 12px; /* Define una separación constante de 12 píxeles entre cada círculo de talla */              
 }
 
-
+/* Círculos individuales para cada opción de talla */
 .Personalizar ul.tallas li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;            
-    height: 44px;
-    border: 1px solid #e0e0e0; 
-    border-radius: 50%;     
-    font-size: 14px;
-    font-weight: 500;
-    color: #555555;
-    background-color: #ffffff;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    display: flex; /* Activa flexbox para centrar perfectamente el número de la talla */
+    align-items: center; /* Centra verticalmente el número dentro del círculo */
+    justify-content: center; /* Centra horizontalmente el número dentro del círculo */
+    width: 44px; /* Define un ancho estático de 44 píxeles creando una caja simétrica */            
+    height: 44px; /* Define un alto estático de 44 píxeles creando una caja simétrica */
+    border: 1px solid #e0e0e0; /* Dibuja un contorno gris claro muy delgado */ 
+    border-radius: 50%; /* Corta las esquinas al revés para dar forma de esfera completa */     
+    font-size: 14px; /* Tamaño de letra de 14 píxeles para el número */
+    font-weight: 500; /* Aplica un grosor de letra medio */
+    color: #555555; /* Color gris oscuro para que resalte moderadamente */
+    background-color: #ffffff; /* Fondo blanco de base */
+    cursor: pointer; /* Cambia el cursor a mano indicando que es seleccionable */
+    transition: all 0.2s ease; /* Genera animaciones fluidas de 0.2 segundos al interactuar */
 }
 
+/* Estado activo de la talla que se encuentra seleccionada */
 .Personalizar ul.tallas li.activa {
-    background-color: #292526; 
-    color: #ffffff;            
-    border-color: #292526;
-    font-weight: 600;
+    background-color: #292526; /* Cambia el fondo a un gris oscuro mate para destacar */ 
+    color: #ffffff; /* Pinta el número de color blanco puro para generar un fuerte contraste */            
+    border-color: #292526; /* Pinta el contorno del mismo tono oscuro */
+    font-weight: 600; /* Aplica un grosor un poco más alto al número seleccionado */
 }
 
+/* Efecto hover sobre las tallas que NO están activas */
 .Personalizar ul.tallas li:hover:not(.activa) {
-    border-color: #111111;
-    color: #111111;
+    border-color: #111111; /* Convierte el borde a negro oscuro cuando el cursor pasa por encima */
+    color: #111111; /* Oscurece el número interno a negro puro */
 }
 
-
+/* Contenedor inferior de la barra de compra */
 .comprar {
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    background-color: #ffffff; 
+    padding: 20px; /* Da un espacio interno acolchado de 20 píxeles */
+    width: 100%; /* Abarca el total del ancho de pantalla */
+    box-sizing: border-box; /* Integra el espaciado en el cálculo del ancho total */
+    display: flex; /* Activa flexbox para posicionar y centrar el botón */
+    justify-content: center; /* Sitúa el botón de compra exactamente al centro horizontal */
+    background-color: #ffffff; /* Asegura un fondo blanco limpio detrás del botón */ 
 }
 
-
+/* Botón principal de agregar al carrito y pagar */
 .comprar button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    width: 100%;
-    max-width: 400px;         
-    height: 56px;            
-    background-color: #292526; 
-    color: #ffffff;            
-    border: none;
-    border-radius: 30px;       
-    padding: 0 24px;           
-    font-size: 15px;
-    font-weight: 600;         
-    cursor: pointer;
-    box-shadow: 0 8px 25px rgba(41, 37, 38, 0.25); 
-    transition: transform 0.1s ease, background-color 0.2s ease;
+    display: flex; /* Activa flexbox para estructurar los elementos internos a los extremos */
+    align-items: center; /* Sincroniza verticalmente los iconos, textos y precios del botón */
+    justify-content: space-between; /* Coloca el texto a la izquierda y el precio tachado a la derecha */ 
+    width: 100%; /* Estira el botón a todo el ancho permitido en móviles */
+    max-width: 400px; /* Restringe el ancho máximo del botón a 400 píxeles en dispositivos más grandes */         
+    height: 56px; /* Define una altura cómoda e idónea para clics móviles de 56 píxeles */            
+    background-color: #292526; /* Aplica el color gris oscuro mate de la marca */ 
+    color: #ffffff; /* Color de letra blanco para su legibilidad */            
+    border: none; /* Elimina bordes grises por defecto del navegador */
+    border-radius: 30px; /* Convierte los extremos del botón en óvalos perfectos */       
+    padding: 0 24px; /* Agrega un espacio libre a los lados interiores de 24 píxeles */           
+    font-size: 15px; /* Establece la letra del texto en 15 píxeles */
+    font-weight: 600; /* Aplica una tipografía semi-negrita */         
+    cursor: pointer; /* Modifica el cursor indicando acción de clic */
+    box-shadow: 0 8px 25px rgba(41, 37, 38, 0.25); /* Agrega una sombra negra difuminada que da efecto de flotación */ 
+    transition: transform 0.1s ease, background-color 0.2s ease; /* Suaviza los efectos de pulsación y color */
 }
 
-
+/* Contenedor interno que junta el icono del carrito con el texto principal */
 .comprar button .btn-contenido {
-    display: flex;
-    align-items: center;
-    gap: 12px;                
+    display: flex; /* Usa flexbox para alinear el icono al lado de las palabras */
+    align-items: center; /* Centrado vertical interno */
+    gap: 12px; /* Agrega una brecha de 12 píxeles entre el icono y el texto */                
 }
 
-
+/* Icono del carrito de compras dentro del botón */
 .comprar button .btn-contenido img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-    filter: brightness(0) invert(1); 
+    width: 20px; /* Define el ancho del icono en 20 píxeles */
+    height: 20px; /* Define el alto del icono en 20 píxeles */
+    object-fit: contain; /* Ajusta la escala del icono de manera proporcional */
+    filter: brightness(0) invert(1); /* Truco CSS que transforma un icono originalmente negro en blanco puro */ 
 }
 
-
+/* Texto del precio original tachado (Antes del descuento) */
 .comprar button .precio-antes {
-    font-size: 12px;
-    color: #8e8e8e;           
-    font-weight: 400;
-    margin-left: 10px;
-    text-decoration: line-through;
+    font-size: 12px; /* Letra pequeña de 12 píxeles para menor jerarquía visual */
+    color: #8e8e8e; /* Tono gris claro que simula desactivación o desuso */           
+    font-weight: 400; /* Grosor de letra normal y delgado */
+    margin-left: 10px; /* Separa el precio anterior del bloque de texto principal */
+    text-decoration: line-through; /* Aplica la línea horizontal de tachado sobre el precio */
 }
 
-
+/* Efecto visual de pulsación (Active) sobre el botón de compra */
 .comprar button:active {
-    transform: scale(0.98);    
-    background-color: #1a1819; 
+    transform: scale(0.98); /* Contrae milimétricamente el botón al presionarlo dando feedback de clic */    
+    background-color: #1a1819; /* Oscurece el fondo del botón a un negro casi puro mientras se presiona */ 
 }
 
+/* Etiqueta de enlace `<a>` que envuelve al botón */
 .comprar .btn-enlace {
-    text-decoration: none; 
-    width: 100%;           
-    display: flex;
-    justify-content: center;
+    text-decoration: none; /* Elimina cualquier formato o decoración de enlace nativo */ 
+    width: 100%; /* Estira el enlace para cubrir la totalidad del ancho */          
+    display: flex; /* Activa flexbox para heredar el centrado */
+    justify-content: center; /* Sostiene la alineación central horizontal */
 }
 
+/* Estructura del pie de página */
 footer{
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    width: 100%;
-    padding: 20px;
-
+    display: flex; /* Activa flexbox en el footer */
+    align-items: center; /* Centra verticalmente el contenido del pie de página */
+    justify-items: center; /* Alineación auxiliar del contenido interno */
+    width: 100%; /* Ocupa la totalidad del ancho de pantalla */
+    padding: 20px; /* Otorga un margen interior uniforme de 20 píxeles */
 }
 
+/* Texto del copyright del footer */
 footer p {
-    text-align: center;
-    font-size: 15px;
-    color: #a3a1a2;
-    
+    text-align: center; /* Asegura el centrado absoluto del texto del párrafo */
+    font-size: 15px; /* Establece la letra en 15 píxeles */
+    color: #a3a1a2; /* Aplica un gris claro para que sea discreto en la base */
 }
 
 /* ==========================================
@@ -310,37 +328,38 @@ footer p {
 
 @media (min-width: 1024px) {
    
+    /* Transformación del cuerpo principal a diseño Grid de dos columnas */
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Divide la pantalla en dos mitades perfectas */
-        grid-template-rows: auto auto auto; /* Define las filas para el contenido de la derecha */
-        gap: 20px 60px;          /* 20px de espacio vertical, 60px de separación entre columnas */
-        max-width: 1100px;
-        margin: 100px auto 40px auto; /* Centra el diseño y baja para no chocar con el navbar */
-        padding: 0 40px;
-        box-sizing: border-box;
+        display: grid; /* Activa el sistema Grid Layout en computadoras */
+        grid-template-columns: 1fr 1fr; /* Divide la pantalla exactamente en dos mitades paralelas (50% y 50%) */
+        grid-template-rows: auto auto auto; /* Define tres filas automáticas que se calculan según el texto de la derecha */
+        gap: 20px 60px; /* Deja 20px de separación horizontal y 60px de brecha entre las dos columnas principales */
+        max-width: 1100px; /* Fija un tope de ancho de 1100 píxeles para que la web no se desparrame en pantallas gigantes */
+        margin: 100px auto 40px auto; /* Centra todo el bloque en la pantalla y añade 100px arriba para no tapar el navbar */
+        padding: 0 40px; /* Coloca una separación de protección de 40 píxeles en los lados */
+        box-sizing: border-box; /* Sostiene la precisión métrica del modelo de caja */
     }
 
-    /* 🖼️ COLUMNNA IZQUIERDA: La sección de la Foto */
+    /* COLUMNNA IZQUIERDA: Bloque contenedor de la imagen */
     .producto {
-        grid-column: 1;          /* Fuerza a la foto a quedarse en la columna 1 */
-        grid-row: 1 / span 3;    /* Hace que la foto sea alta y ocupe el espacio de 3 filas */
-        position: relative;
-        padding: 0;
-        width: 100%;
+        grid-column: 1; /* Posiciona de manera obligatoria la foto en la primera columna */
+        grid-row: 1 / span 3; /* Hace que el contenedor de la foto se estire verticalmente abarcando el espacio de 3 filas */
+        position: relative; /* Mantiene su rol de eje para los botones flotantes */
+        padding: 0; /* Remueve los rellenos internos usados en la versión móvil */
+        width: 100%; /* Mantiene su ocupación total de la columna */
     }
 
+    /* Redimensión majestuosa de la imagen del producto en escritorio */
     .producto .foto-principal {
-        width: 100%;
-        height: 520px;            /* Altura imponente para que luzca la foto */
-        object-fit: cover;
-        border-radius: 25px;      /* Esquinas redondeadas */
-        display: block;
+        width: 100%; /* Mantiene el estiramiento horizontal completo en su columna */
+        height: 520px; /* Eleva la altura fija a 520 píxeles para que los detalles de la prenda luzcan increíbles */
+        object-fit: cover; /* Reencuadra perfectamente la imagen sin estirarla a lo alto ni a lo ancho */
+        border-radius: 25px; /* Conserva sus esquinas suavemente redondeadas */
+        display: block; /* Sostiene el comportamiento de bloque */
     }
 
-    /* Ajuste de botones flotantes sobre la foto */
-    .producto .btn-flotante { top: 20px; }
-    .producto .btn-atras { left: 20px; }
-    .producto .btn-favorito { right: 20px; }
-
+    /* Reajuste de coordenadas para los botones flotantes sobre la foto en pantallas grandes */
+    .producto .btn-flotante { top: 20px; } /* Acerca los botones un poco más al borde superior (20px) */
+    .producto .btn-atras { left: 20px; } /* Acerca el botón de regreso a 20px del borde izquierdo */
+    .producto .btn-favorito { right: 20px; } /* Acerca el botón de favorito a 20px del borde derecho */
 }
