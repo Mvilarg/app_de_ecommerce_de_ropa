@@ -1,14 +1,16 @@
+/* Restablecimiento general de márgenes y modelo de caja */
 * { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
-
+/* Importación de tipografía local */
 @font-face {
     font-family: "Encode";
     src: url(../storage/font/EncodeSans-VariableFont_wdth\,wght.ttf);
 }
+/* Estilos globales del cuerpo de la página */
 body {
     background-color: white;
     color: #121111;
@@ -21,19 +23,19 @@ body {
    1. ESTILOS PARA CELULAR
    ========================================== */
 
-  
+  /* Encabezado de la barra superior de Checkout */
 .checkout-header {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Fuerza la orientación horizontal de los bloques */
     align-items: center;         
     justify-content: space-between; 
-    width: 100%;
+    width: 100%; /* Expande el contenedor a todo el ancho de la pantalla */
     padding: 20px;
     background-color: #ffffff;  
-    box-sizing: border-box;
+    box-sizing: border-box; /* Integra el padding en el cálculo del ancho total */
 }
 
-
+/* Título principal del encabezado */
 .checkout-titulo h1 {
     font-size: 18px;
     font-weight: 700;
@@ -42,13 +44,13 @@ body {
     text-align: center;
 }
 
-
+/* Botones circulares de los extremos (Atrás y Menú) */
 .checkout-header .btn-redondo {
     width: 44px;
     height: 44px;
-    background-color: #ffffff;
-    border: 1px solid #f0f0f0;   
-    border-radius: 50%;          
+    background-color: #ffffff; /* Dibuja un contorno gris muy sutil */
+    border: 1px solid #f0f0f0; 
+    border-radius: 50%; /* Corta las esquinas al 50% para hacerlos circulares */         
     display: flex;               
     justify-content: center;
     align-items: center;
@@ -56,7 +58,7 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); 
 }
 
-
+/* Enlace dentro del botón circular Atrás */
 .checkout-header .btn-redondo a {
     display: flex;
     justify-content: center;
@@ -66,29 +68,29 @@ body {
     text-decoration: none;
 }
 
-
+/* Dimensiones de los iconos dentro de los botones superiores */
 .checkout-header .btn-redondo img {
     width: 16px;
     height: 16px;
-    object-fit: contain;
+    object-fit: contain; /* Escala la imagen para que se vea completa sin deformarse */
 }
 
 
-
+/* Contenedor principal de la lista de productos */
 .detalle {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Apila las tarjetas de productos una debajo de otra */
     gap: 20px;
-    padding: 20px;
+    padding: 20px; /* Define una separación constante de 20 píxeles entre tarjetas */
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Integra el padding en el cálculo del ancho total */
     background-color: #ffffff;
 }
 
-
+/* Tarjeta individual de producto en el carrito */
 .detalle .producto-tarjeta {
     display: flex;
-    flex-direction: row;        
+    flex-direction: row; /* Coloca la imagen y la información una al lado de la otra */       
     align-items: center;        
     justify-content: space-between; 
     width: 100%;
@@ -97,38 +99,40 @@ body {
     border-bottom: 1px solid #f7f7f7; 
 }
 
-
+/* Contenedor de la imagen del producto */
 .detalle .imagen1 {
     width: 85px;
     height: 85px;
     border-radius: 18px;
-    overflow: hidden;
-    flex-shrink: 0;             
+    overflow: hidden; /* Corta cualquier parte de la imagen que sobresalga de los bordes */
+    flex-shrink: 0;   /* Impide que la caja de la foto se comprima si falta espacio */        
 }
 
+/* Imagen dentro del contenedor del artículo */
 .detalle .imagen1 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;          
+    object-fit: cover;    /* Recorta y encuadra la imagen proporcionalmente sin deformarla */      
 }
 
-
+/* Bloque central de textos y controles */
 .detalle .info {
     display: flex;
-    flex-direction: column;    
-    gap: 4px;
+    flex-direction: column;    /* Coloca los títulos arriba y los precios/contadores abajo */
+    gap: 4px; /* Crea un espacio de 4 píxeles entre los renglones */
     margin-left: 16px;
-    flex-grow: 1;               
+    flex-grow: 1;   /* Permite que este bloque use todo el espacio sobrante horizontal */            
 }
 
+/* Nombre de la prenda */
 .detalle .info h2 {
     font-size: 15px;
     font-weight: 700;
     color: #111111;
     margin: 0;
-    line-height: 1.3;
+    line-height: 1.3; /* interlinedo vertical de las lineas */
 }
-
+/* descripción */
 .detalle .info p {
     font-size: 12px;
     color: #a0a0a0;
@@ -176,7 +180,7 @@ body {
     cursor: pointer;
 }
 
-
+/* Sección contenedora general del resumen financiero */
 .resumen {
     padding: 20px;
     width: 100%;
@@ -187,15 +191,15 @@ body {
     background-color: #ffffff;
 }
 
-
+/* Título de la sección de facturación */
 .resumen .resumen-titulo {
     font-size: 16px;
     font-weight: 700;
     color: #111111;
-    margin: 0 0 4px 0;
+    margin: 0 0 4px 0;  /* Añade únicamente un margen inferior de 4 píxeles */
 }
 
-
+/* Barra gris del método de pago de tarjeta */
 .resumen .metodo-pago {
     display: flex;
     flex-direction: row;
@@ -205,34 +209,38 @@ body {
     padding: 16px 20px;
     border-radius: 16px;         
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Sostiene la precisión métrica */
 }
 
+/* Bloque izquierdo interno del método de pago */
 .resumen .pago-detalles {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 12px; /* Deja una separación de 12 píxeles entre el logo y los números */
 }
 
+/* Logotipo de la tarjeta Visa */
 .resumen .logo-visa {
     width: 35px;
     height: auto;
-    object-fit: contain;
+    object-fit: contain; /* Muestra el logo completo en su espacio */
 }
 
+/* Texto del número enmascarado de la tarjeta */
 .resumen .numero-tarjeta {
     font-size: 14px;
     font-weight: 500;
     color: #111111;
 }
 
+/* Icono de la flecha de despliegue a la derecha */
 .resumen .flecha-abajo {
     width: 14px;
     height: 14px;
     object-fit: contain;
 }
 
-
+/* Bloque contenedor del desglose de cobros */
 .desglose-precios {
     width: 100%;
     display: flex;
@@ -241,41 +249,42 @@ body {
     margin-top: 10px;
 }
 
-
+/* Filas individuales del desglose (Total y Descuento) */
 .desglose-precios .fila-precio {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Coloca elementos uno al lado de otro */
     justify-content: space-between; 
     width: 100%;
 }
 
+/* Textos generales de los párrafos del desglose */
 .desglose-precios .fila-precio p {
     font-size: 14px;
     margin: 0;
 }
 
-
+/* descripcion del cobro */
 .desglose-precios .titems, 
 .desglose-precios .tdescuento {
     color: #666666;
 }
 
-
+/* Valores numéricos de los cobros */
 .desglose-precios .preciot, 
 .desglose-precios .pdescuento {
     font-weight: 600;
     color: #111111;
 }
 
-
+/* Línea divisoria horizontal HR */
 .desglose-precios .linea-separadora {
-    border: none;
-    border-top: 1px solid #f0f0f0;
-    margin: 8px 0;
-    width: 100%;
+    border: none; /* Remueve los bordes con relieve por defecto de la etiqueta hr */
+    border-top: 1px solid #f0f0f0; /* Crea un borde superior delgado de color gris claro */
+    margin: 8px 0; /* Deja un espacio libre de 8px arriba y abajo de la línea */
+    width: 100%; /* Estira la línea de lado a lado */
 }
 
-
+/* Fila final destinada al Sub Total */
 .desglose-precios .subtotal {
     display: flex;
     flex-direction: row;
@@ -291,7 +300,7 @@ body {
     margin: 0;
 }
 
-
+/* Texto del concepto Sub Total */
 .desglose-precios .subtotal .sptotal {
     font-size: 16px;
     font-weight: 700;       
@@ -299,7 +308,7 @@ body {
     margin: 0;
 }
 
-
+/* Contenedor del botón inferior de pago */
 .pagar {
     padding: 20px;
     width: 100%;
@@ -309,7 +318,7 @@ body {
     background-color: #ffffff; 
 }
 
-
+/* Botón de acción principal para efectuar el pago */
 .pagar button {
     display: flex;
     align-items: center;
@@ -322,34 +331,34 @@ body {
     border-radius: 30px;        
     cursor: pointer;
     box-shadow: 0 6px 20px rgba(35, 32, 33, 0.2); 
-    transition: transform 0.1s ease, background-color 0.2s ease;
+    transition: transform 0.1s ease, background-color 0.2s ease; /* Suaviza las animaciones de interactividad */
 }
 
-
+/* Texto interno contenido en el botón */
 .pagar button span {
     color: #ffffff;             
     font-size: 16px;
     font-weight: 600;           
-    letter-spacing: 0.5px;      
+    letter-spacing: 0.5px; /* Agrega una separación milimétrica entre las letras */
 }
 
-
+/* Efecto visual de pulsación (Active) al presionar el botón */
 .pagar button:active {
-    transform: scale(0.98);     
-    background-color: #151314;  
+    transform: scale(0.98);     /* Reduce milimétricamente el botón simulando un hundimiento físico */
+    background-color: #151314;  /* Oscurece el color de fondo a un negro más denso mientras se presiona */
 }
 
 /* ==========================================
      2. ESTILOS PARA ESCRITORIO
      ========================================== */
 
-@media (min-width: 1024px {
+@media (min-width: 1024px) {
 
-    
+    /* Transformación del cuerpo principal a estructura Grid de columnas paralelas */
     main {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr; 
-        grid-template-rows: auto auto;    
+        display: grid; /* Activa el motor de rejilla Grid Layout en computadoras */
+        grid-template-columns: 1.2fr 0.8fr; /* Divide la pantalla en dos columnas asimétricas (izquierda más ancha) */
+        grid-template-rows: auto auto;    /* Configura dos filas con altura adaptativa según su contenido */
         gap: 20px 50px;                   
         max-width: 1200px;               
         margin: 80px auto 40px auto;      
@@ -357,24 +366,25 @@ body {
         box-sizing: border-box;
     }
 
-    
+    /* Ubicación del encabezado superior abarcando toda la pantalla */
     .checkout-header {
-        grid-column: 1 / span 2;          
-        grid-row: 1;
+        grid-column: 1 / span 2;  /* Estira el encabezado obligándolo a cubrir el ancho de las 2 columnas */
+        grid-row: 1; /* Posiciona de forma fija el bloque en la primera fila */
         padding: 20px 0;                 
     }
 
-    
+    /* COLUMNA IZQUIERDA: Sección de la lista de artículos */
     .detalle {
         grid-column: 1;                   
         grid-row: 2;                      
         padding: 0;                       
     }
-
+/* Tarjetas de artículos ampliadas en computadoras */
     .detalle .producto-tarjeta {
         padding: 20px 0;                  
     }
 
+    /* COLUMNA DERECHA: Sección de facturación y resumen */
     .resumen {
         grid-column: 2;                  
         grid-row: 2;                     
@@ -382,7 +392,7 @@ body {
         background-color: transparent;     
     }
 
-
+    /* Reubicación inteligente del botón de pago en escritorio */
     .pagar {
         grid-column: 2;                   
         grid-row: 3;                      
@@ -390,10 +400,10 @@ body {
         background-color: transparent;
     }
 
+    /* Ajuste dimensional del botón "Pay" en computadoras */
     .pagar button {
-        max-width: 100%;                  
-        height: 60px;                     
+        max-width: 100%;  /* Elimina los topes anteriores permitiendo que abarque el total de su columna */                
+        height: 60px;      /* Eleva la altura a 60 píxeles*/
     }
-}
 
-
+    }
