@@ -168,17 +168,18 @@ nav ul.menu img{
 
 /* Contenedor de elementos de categoría */
 .categorias ul{
+    margin: 0;
     display:grid; /* Alinea los elementos `li` uno al lado del otro de forma horizontal */
     flex-direction: column;
     /* flex-direction: row;  Establece explícitamente la dirección en fila */
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(2,1fr); 
     list-style: none; /* Remueve los puntos por defecto de la lista */
     justify-content: space-between;
     /*padding: 0; /* Quita el relleno izquierdo por defecto de las listas */
     /*margin: 0; /* Quita los márgenes por defecto */
     /*gap: 12px; /* Separa cada botón de categoría por 12 píxeles */
-    gap: 20px;
-    padding: 20px;
+    gap: 19px;
+    padding: 19px;
 
 }
 
@@ -201,7 +202,7 @@ nav ul.menu img{
     font-weight: 500; /* Aplica un grosor de letra medio */
     cursor: pointer; /* Transforma el puntero en mano para indicar interactividad */
     transition: all 0.2s ease; /* Aplica una animación suave de 0.2 segundos al cambiar de estado */
-    width: 130px;
+    width: 160px;
     height: 100px;
 }
 
@@ -407,7 +408,28 @@ footer p {
         align-items: center; /* Centra el contenido verticalmente */
         gap: 10px ; /* Espaciado interno */
     }
+/*----------- Categorias---------*/
+    .categorias {
+        overflow-x: auto; 
+        scrollbar-width: none;  
+        justify-content: center;
+        align-items: center;
+    }
 
+    .categorias button {
+        gap: 12px; /* Agrega un espacio de 8 píxeles entre el icono y la palabra */
+        width: 400px;
+        height: 100px;
+        font-size: 18px;
+    }
+
+    .categorias ul{
+        grid-template-columns: repeat(4, 1fr); 
+        justify-content: space-between;
+        gap: 30px;
+        padding: 40px;
+    
+    }
     /* Ajuste de márgenes del cuerpo principal en escritorio */
     main {
         margin-left: 0; /* Remueve márgenes laterales izquierdos */
