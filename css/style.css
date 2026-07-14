@@ -179,7 +179,8 @@ nav ul.menu img{
     /*margin: 0; /* Quita los márgenes por defecto */
     /*gap: 12px; /* Separa cada botón de categoría por 12 píxeles */
     gap: 19px;
-    padding: 19px;
+    padding: 20px;
+    box-sizing: border-box;
 
 }
 
@@ -417,6 +418,7 @@ footer p {
     }
 
     .categorias button {
+
         gap: 12px; /* Agrega un espacio de 8 píxeles entre el icono y la palabra */
         width: 400px;
         height: 100px;
