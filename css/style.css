@@ -167,18 +167,15 @@ nav ul.menu img{
 } */
 
 /* Contenedor de elementos de categoría */
+
 .categorias ul{
     margin: 0;
     display:grid; /* Alinea los elementos `li` uno al lado del otro de forma horizontal */
     flex-direction: column;
-    /* flex-direction: row;  Establece explícitamente la dirección en fila */
     grid-template-columns: repeat(2,1fr); 
     list-style: none; /* Remueve los puntos por defecto de la lista */
     justify-content: space-between;
-    /*padding: 0; /* Quita el relleno izquierdo por defecto de las listas */
-    /*margin: 0; /* Quita los márgenes por defecto */
-    /*gap: 12px; /* Separa cada botón de categoría por 12 píxeles */
-    gap: 19px;
+    gap: 20px;
     padding: 20px;
     box-sizing: border-box;
 
@@ -187,13 +184,16 @@ nav ul.menu img{
  /*Bloqueo de encogimiento de items del carrusel */
 .categorias ul li {
     flex-shrink: 0; /* Impide que los elementos de la lista se compriman o deformen */
+    justify-content: space-between;
+
 }
 
 /* Botones de filtros de categoría */
 .categorias button {
+    position: relative;
     display: flex; /* Alinea el icono y el texto interior horizontalmente */
     align-items: center; /* Centra verticalmente el icono con el texto */
-    gap: 8px; /* Agrega un espacio de 8 píxeles entre el icono y la palabra */
+    gap: 20px; /* Agrega un espacio de 8 píxeles entre el icono y la palabra */
     padding: 10px 16px; /* Da relleno de 10px arriba/abajo y 16px a los lados */
     background-color: #f7f7f7; /* Aplica un fondo gris muy tenue */
     border: 1px solid #eaeaea; /* Agrega un borde fino para delimitar el botón */
@@ -203,7 +203,7 @@ nav ul.menu img{
     font-weight: 500; /* Aplica un grosor de letra medio */
     cursor: pointer; /* Transforma el puntero en mano para indicar interactividad */
     transition: all 0.2s ease; /* Aplica una animación suave de 0.2 segundos al cambiar de estado */
-    width: 160px;
+    width: 100%;
     height: 100px;
 }
 
@@ -370,7 +370,7 @@ footer p {
     nav ul.menu {
         display: flex; /* Habilita el modo flexbox */
         flex-direction: row; /* Coloca la navegación en formato de fila horizontal */
-        justify-content: center; /* Alinea el menú justo al centro de la pantalla */
+        justify-content: space-between; /* Alinea el menú justo al centro de la pantalla */
         align-items: center; /* Centra verticalmente las opciones */
         gap: 40px; /* Aumenta el espacio entre botones a 40 píxeles en computadoras */
         width: 100%; /* Abarca el total del contenedor */
